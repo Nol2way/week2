@@ -3,47 +3,122 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Collab</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(to right, #f8f9fa, #e9ecef);
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 50px;
+        margin-bottom: 30px;
+        color: #2c3e50;
+      }
+
+      /* คอนเทนเนอร์รวมทุก profile */
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: 20px;
+        flex-wrap: nowrap; /* ถ้าหน้าจอเล็ก จะไม่ตัดบรรทัด */
+        overflow-x: auto;  /* เลื่อนซ้ายขวาได้ถ้าหน้าจอเล็ก */
+        padding: 10px;
+      }
+
+      /* กล่อง profile */
+      .profile {
+        flex: 1 1 200px; /* ขยายได้ แต่มีขั้นต่ำ */
+        max-width: 300px;
+        min-width: 200px;
+        text-align: center;
+        background: #fff;
+        padding: 15px;
+        border-radius: 20px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .profile:hover {
+        transform: translateY(-8px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      /* รูปโปรไฟล์ */
+      .profile img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 15px;
+        margin-bottom: 15px;
+      }
+
+      .profile p {
+        font-size: 18px;
+        margin: 5px 0;
+      }
+
+      .profile b {
+        font-size: 20px;
+        color: #0077b6;
+      }
+
+      .quote {
+        font-size: 16px;
+        color: #495057;
+        font-style: italic;
+      }
+    </style>
   </head>
   <body>
     <h1>Collab</h1>
-    <!-- 67111111, dev1 info -->
-    <center>
-      <div style="max-width: 800px">
-        <img src="stdempimg.png" alt="" />
-        <div style="font-size: 50px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">67129568 Sittha Wongkhunakorn <br>
-          คำโดนใจ <p style="color: blue;">study hard play harder</p>
-        </div>
+
+    <div class="container">
+      <!-- dev1 -->
+      <div class="profile">
+        <img src="stdempimg.png" alt="profile1" />
+        <p><b>67129568</b><br>Sittha Wongkhunakorn</p>
+        <p class="quote" style="color: blue;">study hard play harder</p>
       </div>
-    </center>
 
-   <!-- 67133473, dev2 info -->
-
-    <div align="center" style="font-family: monospace; font-size: x-large;">
-            <img src="dwadwadwafawfwakgre.jpg" alt="" width="400" style="border-radius: 50px;">
-            <p><b>67133473</b> Mr. Prasobkarn Phompan</p>
-            <p>ทุกวันคือโอกาสใหม่</p>
-        </div>
-
-    <!-- 6733333, dev3 info -->
-     <div align="center" style="font-family: monospace; font-size: x-large;">
-            <img src="./75c1463c-f7c1-4dd9-b32e-5399037c9bf6.jpg" alt="" width="500" style="border-radius: 50px;">
-            <p><b>67131315</b> Mr. Napat Pichairat</p>
-            <p>ในวันที่ไม่มีคนข้างเคียง เราก็ยังมีเหนียงที่อยู่ข้างคอ</p>
-        </div>
-
-    <!-- 6744444, dev4 info -->
-     <div align="center" style="font-family: cursive; font-size: x-large;">
-            <img src="Shawtyzx.jpg" alt="" width="600" style="border-radius: 60px;">
-            <p><b>67128974</b> Mr. Sittchok Bunthiab</p>
-            <p>ดีมากก็ขึ้นสวรรค์ไปเลยพี่ อยู่ตรงนี้ให้รําคาญไม</p>
-        </div>
-
-    <!-- 67185651, dev5 info -->
-     <div align="center" style="font-family:sans-serif; font-size: 30px;">
-            <img src="S__9338922.jpg" alt="" width="400" style="border-radius: 50px;">
-            <p><b>67185651</b> Mr. Weerawat Sangsawang</p>
-            <p align="center">ยุคนี้พรหมลิขิต ก็สู้บัตรเครดิตไม่ได้หรอก</p>
+      <!-- dev2 -->
+      <div class="profile">
+        <img src="dwadwadwafawfwakgre.jpg" alt="profile2" />
+        <p><b>67133473</b><br>Mr. Prasobkarn Phompan</p>
+        <p class="quote">ทุกวันคือโอกาสใหม่</p>
       </div>
+
+      <!-- dev3 -->
+      <div class="profile">
+        <img src="./75c1463c-f7c1-4dd9-b32e-5399037c9bf6.jpg" alt="profile3" />
+        <p><b>67131315</b><br>Mr. Napat Pichairat</p>
+        <p class="quote">ในวันที่ไม่มีคนข้างเคียง เราก็ยังมีเหนียงที่อยู่ข้างคอ</p>
+      </div>
+
+      <!-- dev4 -->
+      <div class="profile">
+        <img src="Shawtyzx.jpg" alt="profile4" />
+        <p><b>67128974</b><br>Mr. Sittchok Bunthiab</p>
+        <p class="quote">ดีมากก็ขึ้นสวรรค์ไปเลยพี่ อยู่ตรงนี้ให้รําคาญไม</p>
+      </div>
+
+      <!-- dev5 -->
+      <div class="profile">
+        <img src="S__9338922.jpg" alt="profile5" />
+        <p><b>67185651</b><br>Mr. Weerawat Sangsawang</p>
+        <p class="quote">ยุคนี้พรหมลิขิต ก็สู้บัตรเครดิตไม่ได้หรอก</p>
+      </div>
+    </div>
   </body>
 </html>
